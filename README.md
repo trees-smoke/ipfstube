@@ -1,16 +1,37 @@
-# ipfstube
+# SmokeTube
 
-Watch videos stored on IPFS
+Watch Smoke.io videos stored on IPFS
 
-Live at [ipfstube.erindachtler.me](http://ipfstube.erindachtler.me)
+Live at [smoketube.witness.pw](https://smoketube.witness.pw)
 
-[Demo video](https://ipfstube.erindachtler.me/v/QmU1GSqu4w29Pt7EEM57Lhte8Lce6e7kuhRHo6rSNb2UaC)
+[Demo video](https://smoketube.witness.pw/player.html?v=QmTx4XECwfn4kgzMa8KgL932Vc3yk8LbJJ9NgU4ox5yEQf)
 
 
 ## Setup
 
-Run certbot to pull in letsencrypt certificates for your domain.
+### IPFS
 
-Edit `nginx.conf` to use your domain and the path to your certs.
+1. [Download IPFS](https://dist.ipfs.io/#go-ipfs)
 
-Run `docker-compose build && docker-compose up -d`
+2. Install,
+
+       tar xzf go-ipfs_v0.4.18_linux-amd64.tar.gz
+       cd go-ipfs/
+       sudo ./install.sh
+       
+3. Initialize IPFS,
+
+       ipfs init
+       
+4. Begin IPFS daemon, with garbage-collection on.
+
+       ipfs daemon --enable-gc
+       
+### nginx
+
+1. Install nginx,
+
+       sudo apt install nginx
+       
+2. Edit /etc/nginx/nginx.conf and /etc/nginx/sites-enabled/default similar to the nginx.conf and /sites-enabled/default here.
+
