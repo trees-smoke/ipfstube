@@ -35,3 +35,4 @@ Live at [smoketube.witness.pw](https://smoketube.witness.pw)
        
 2. Edit /etc/nginx/nginx.conf and /etc/nginx/sites-enabled/default similar to the nginx.conf and /sites-enabled/default here.
 
+3. Pull /ipfstube/public/ to /var/www/html/
