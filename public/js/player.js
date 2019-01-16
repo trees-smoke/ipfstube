@@ -1,9 +1,9 @@
 (function() {
         queries = {}
         $.each(document.location.search.substr(1).split('&'),function(q){
-    console.log(q);var i = q.split('=')
-    queries[i[0].toString()] = i[1].toString()
-  })  
+           console.log(q);var i = q.split('=')
+           queries[i[0].toString()] = i[1].toString()
+        })  
  
         var hash = queries.v
         try {
@@ -11,10 +11,10 @@
         } catch(e) {
                 var subs = {}
         }
-         // hash = 'QmYYMMKS5z9h2CL69GBTTys2SFRZH7XM2iiRTuqrYhYGkj';
+         // hash = '';
          /*subs = {
-                "en": "Qmd9h2eZb4ft4cZAxtypj4YSs4iDu9kLfeXtG2ECgx4Mcc",
-                "es": "QmeVvJaydsTNJ493JPp5xcvMjMZaWBuS8eZoMCh6vpVTgV"
+                "en": "",
+                "es": ""
          }*/
  
         var playerHolder = $('#player__holder');
@@ -23,7 +23,6 @@
                 'ipfs:', // Browser handler
                 'http://127.0.0.1:8080', // User's own IPFS daemon
                 'https://smoketube.witness.pw', // Us
-                'https://cloudflare-ipfs.com', // cloudflare-ipfs.com
                 'https://gateway.ipfs.io' // Official gateway
         ];
         var urls = sources.map(function(prefix) {
