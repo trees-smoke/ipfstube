@@ -67,7 +67,7 @@ If you're not currently running either and have no preference between the two, n
        
 If you want to turn off access logs you can edit /etc/nginx/nginx.conf setting to,
 
-    access_log off;
+       access_log off;
 
 2. Edit /etc/nginx/sites-enabled/default to include the configuration options for nginx.
 
@@ -75,6 +75,6 @@ If you want to turn off access logs you can edit /etc/nginx/nginx.conf setting t
 
 4. Reload nginx,
 
-       sude service nginx reload
+       sudo service nginx reload
        
 5. Contact @trees on [Discord](https://discord.gg/n6YUeuA) with your IP address(es) to be added to the DNS record.  The node should begin to send and receive traffic.
