@@ -78,3 +78,15 @@ If you want to turn off access logs you can edit /etc/nginx/nginx.conf setting t
        sudo service nginx reload
        
 5. Contact @trees on [Discord](https://discord.gg/n6YUeuA) with your IP address(es) to be added to the DNS record.  The node should begin to send and receive traffic.
+
+## Creating your own separate Public Gateway Cluster.
+
+If you have a domain name and wish to create your own public gateway cluster, you can edit the files in public/ to point to your own domain and then add them to ipfs.
+
+       ipfs add -r public/
+       
+Then you take the root directory hash ipfs spits out and append it to a TXT DNSLink entry in your DNS records.
+
+       _dnslink.subdomain.domain.tld : dnslink=/ipfs/<IPFS Hash IPFS spat out>
+       
+Now when you navigate to that subdomain/domain from any of the public gateways in your cluster, it will traverse IPFS for the website you just added.
